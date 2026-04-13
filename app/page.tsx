@@ -1,65 +1,24 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="space-y-10 py-10">
+      <header className="text-center space-y-4">
+        <h1 className="text-5xl font-extrabold text-gray-900">Dominate AI Search</h1>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          Free Generative Engine Optimization (GEO) utilities to help your brand get cited by Gemini, ChatGPT, and Perplexity.
+        </p>
+      </header>
+
+      <div className="grid md:grid-cols-2 gap-6 mt-12">
+        <a href="/tools/visibility-checker" className="block p-8 bg-white border rounded-xl shadow-sm hover:shadow-md transition border-blue-100">
+          <h2 className="text-2xl font-bold text-blue-600 mb-2">AI Visibility Checker ➔</h2>
+          <p className="text-gray-600">Enter your domain and see how often AI models are citing your brand in their answers.</p>
+        </a>
+
+        <a href="/blog/what-is-geo" className="block p-8 bg-white border rounded-xl shadow-sm hover:shadow-md transition">
+          <h2 className="text-2xl font-bold mb-2">What is GEO? ➔</h2>
+          <p className="text-gray-600">Read our definitive guide on why traditional SEO is dying and how to adapt your site for LLMs.</p>
+        </a>
+      </div>
     </div>
   );
 }
