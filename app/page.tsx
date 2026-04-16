@@ -1,4 +1,14 @@
-<div className="grid md:grid-cols-3 gap-6 mt-12">
+export default function Home() {
+  return (
+    <div className="space-y-10 py-10">
+      <header className="text-center space-y-4">
+        <h1 className="text-5xl font-extrabold text-gray-900">Dominate AI Search</h1>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          Free Generative Engine Optimization (GEO) utilities to help your brand get cited by Gemini, ChatGPT, and Perplexity.
+        </p>
+      </header>
+
+      <div className="grid md:grid-cols-3 gap-6 mt-12">
         {/* Core Tool */}
         <a href="/tools/visibility-checker" className="block p-6 bg-blue-50 border rounded-xl shadow-sm hover:shadow-md transition border-blue-200 col-span-full md:col-span-1">
           <h2 className="text-xl font-bold text-blue-700 mb-2">AI Visibility Checker ➔</h2>
@@ -46,9 +56,11 @@
           <p className="text-sm text-gray-600">Common pitfalls developers face ranking in AI.</p>
         </a>
 
-        {/* The Missing Card! */}
         <a href="/blog/ai-search-ranking-factors" className="block p-6 bg-white border rounded-xl shadow-sm hover:shadow-md transition">
           <h2 className="text-lg font-bold mb-2">AI Search Ranking Factors ➔</h2>
           <p className="text-sm text-gray-600">The top 3 measurable signals for GEO success.</p>
         </a>
       </div>
+    </div>
+  );
+}
