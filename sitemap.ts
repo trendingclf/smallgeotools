@@ -1,9 +1,11 @@
 import { MetadataRoute } from 'next'
 
+// This line forces Next.js to build a permanent, static XML file
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://smallgeotools.com'
 
-  // Your published blog slugs
   const blogs = [
     'what-is-geo',
     'json-ld-entity-seo',
@@ -16,7 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'ai-search-ranking-factors'
   ]
 
-  // Automatically generate the sitemap nodes for the blogs
   const blogUrls = blogs.map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified: new Date(),
