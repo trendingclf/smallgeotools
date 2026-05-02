@@ -9,10 +9,16 @@ export default function Home() {
       </header>
 
       <div className="grid md:grid-cols-3 gap-6 mt-12">
-        {/* Core Tool */}
+        {/* Core Tool 1 */}
         <a href="/tools/visibility-checker" className="block p-6 bg-blue-50 border rounded-xl shadow-sm hover:shadow-md transition border-blue-200 col-span-full md:col-span-1">
           <h2 className="text-xl font-bold text-blue-700 mb-2">AI Visibility Checker ➔</h2>
           <p className="text-sm text-gray-600">Analyze how often AI models cite your brand.</p>
+        </a>
+
+        {/* Core Tool 2 */}
+        <a href="/tools/schema-generator" className="block p-6 bg-blue-50 border rounded-xl shadow-sm hover:shadow-md transition border-blue-200 col-span-full md:col-span-1">
+          <h2 className="text-xl font-bold text-blue-700 mb-2">JSON-LD Schema Generator ➔</h2>
+          <p className="text-sm text-gray-600">Instantly generate structured entity data for AI bots.</p>
         </a>
 
         {/* Blog Cards */}
