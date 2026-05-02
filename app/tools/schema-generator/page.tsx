@@ -1,7 +1,7 @@
-import ShareButtons from "../../../components/ShareButtons";
 "use client";
 
 import { useState } from "react";
+import ShareButtons from "../../../components/ShareButtons";
 
 export default function SchemaGenerator() {
   const [brandName, setBrandName] = useState("");
@@ -82,11 +82,13 @@ export default function SchemaGenerator() {
         </div>
 
         {/* Output Display */}
-        <div className="bg-gray-900 rounded-xl p-6 relative shadow-lg">
-          <h3 className="text-gray-300 text-sm font-semibold mb-4 uppercase tracking-wider">Generated JSON-LD</h3>
-          <pre className="text-green-400 text-sm overflow-x-auto whitespace-pre-wrap font-mono">
-            {generatedSchema}
-          </pre>
+        <div className="bg-gray-900 rounded-xl p-6 relative shadow-lg flex flex-col justify-between">
+          <div>
+            <h3 className="text-gray-300 text-sm font-semibold mb-4 uppercase tracking-wider">Generated JSON-LD</h3>
+            <pre className="text-green-400 text-sm overflow-x-auto whitespace-pre-wrap font-mono">
+              {generatedSchema}
+            </pre>
+          </div>
           <button 
             onClick={copyToClipboard}
             className="mt-6 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition"
@@ -95,7 +97,9 @@ export default function SchemaGenerator() {
           </button>
         </div>
       </div>
-<ShareButtons title="JSON-LD Schema Generator" urlPath="/tools/schema-generator"/>
+
+      {/* Reusable Share Component */}
+      <ShareButtons title="JSON-LD Schema Generator" urlPath="/tools/schema-generator" />
     </div>
   );
 }
