@@ -1,3 +1,4 @@
+import ShareButtons from "../../../components/ShareButtons";
 "use client";
 
 import { useState } from "react";
@@ -94,6 +95,7 @@ export default function SchemaGenerator() {
           </button>
         </div>
       </div>
+<ShareButtons title="JSON-LD Schema Generator" urlPath="/tools/schema-generator"/>
     </div>
   );
 }
