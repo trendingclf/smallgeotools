@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ShareButtons from "../../../components/ShareButtons";
 
 export default function InformationGainAnalyzer() {
   const [content, setContent] = useState("");
@@ -20,18 +21,15 @@ export default function InformationGainAnalyzer() {
       const words = content.trim().split(/\s+/).filter(word => word.length > 0);
       const wordCount = words.length;
       
-      // Look for numbers/percentages (statistics)
       const statsMatch = content.match(/\d+(\.\d+)?%?/g);
       const statsCount = statsMatch ? statsMatch.length : 0;
 
-      // Look for quotation marks (expert quotes)
       const quotesMatch = content.match(/["'“‘].*?["'”’]/g);
       const quotesCount = quotesMatch ? quotesMatch.length : 0;
 
       let score = 0;
       const feedback = [];
 
-      // Scoring Logic
       if (wordCount > 300) {
         score += 30;
         feedback.push("✅ Good length for context parsing.");
@@ -63,7 +61,7 @@ export default function InformationGainAnalyzer() {
         feedback
       });
       setIsAnalyzing(false);
-    }, 800); // Simulate processing time
+    }, 800);
   };
 
   return (
@@ -76,7 +74,6 @@ export default function InformationGainAnalyzer() {
       </header>
 
       <div className="grid lg:grid-cols-3 gap-8">
-        {/* Input Area */}
         <div className="lg:col-span-2 space-y-4">
           <textarea 
             className="w-full h-96 border border-gray-300 rounded-xl p-4 focus:ring-2 focus:ring-blue-500 outline-none text-gray-700 resize-none shadow-sm"
@@ -93,7 +90,6 @@ export default function InformationGainAnalyzer() {
           </button>
         </div>
 
-        {/* Results Dashboard */}
         <div className="bg-gray-50 border border-gray-200 rounded-xl p-6 shadow-sm h-fit">
           <h2 className="text-lg font-bold text-gray-900 mb-6 uppercase tracking-wide">Analysis Report</h2>
           
@@ -135,6 +131,9 @@ export default function InformationGainAnalyzer() {
           )}
         </div>
       </div>
+
+      {/* Reusable Share Component */}
+      <ShareButtons title="Information Gain Analyzer" urlPath="/tools/information-gain" />
     </div>
   );
 }
