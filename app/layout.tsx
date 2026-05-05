@@ -26,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-gray-50 text-gray-900 font-sans antialiased">
+        <Navbar/>
         <nav className="p-4 border-b bg-white flex justify-between items-center shadow-sm">
           <a href="/" className="text-xl font-bold text-blue-600">SmallGEOTools</a>
           <div className="space-x-6">
