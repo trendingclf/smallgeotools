@@ -21,10 +21,16 @@ export default function Home() {
           <p className="text-sm text-gray-600">Instantly generate structured entity data for AI bots.</p>
         </a>
 
-        {/* Core Tool 3 (NEW) */}
+        {/* Core Tool 3 */}
         <a href="/tools/information-gain" className="block p-6 bg-blue-50 border rounded-xl shadow-sm hover:shadow-md transition border-blue-200">
           <h2 className="text-xl font-bold text-blue-700 mb-2">Info Gain Analyzer ➔</h2>
           <p className="text-sm text-gray-600">Score your content for unique data and AI readability.</p>
+        </a>
+
+        {/* Core Tool 4 (NEW) */}
+        <a href="/tools/ai-robots-generator" className="block p-6 bg-blue-50 border rounded-xl shadow-sm hover:shadow-md transition border-blue-200">
+          <h2 className="text-xl font-bold text-blue-700 mb-2">AI robots.txt Generator ➔</h2>
+          <p className="text-sm text-gray-600">Control which LLM bots are allowed to scrape your domain.</p>
         </a>
 
         {/* Blog Cards */}
