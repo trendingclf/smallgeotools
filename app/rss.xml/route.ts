@@ -1,5 +1,6 @@
 // app/rss.xml/route.ts
 import { NextResponse } from 'next/server';
+export const runtime = 'edge';
 
 export async function GET() {
   const siteUrl = "https://smallgeotools.com"; // Replace with your domain
