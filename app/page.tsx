@@ -1,15 +1,27 @@
+import RssButton from "../components/RssButton";
+
 export default function Home() {
   return (
     <div className="space-y-12 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       
       {/* HERO SECTION */}
-      <header className="text-center space-y-6 mb-20 mt-10">
+      <header className="text-center space-y-6 mb-20 mt-10 relative">
+        {/* Top Right Mini-Nav / Status */}
+        <div className="absolute top-0 right-0 hidden md:block">
+           <RssButton />
+        </div>
+
         <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight">
           Dominate <span className="text-blue-600">AI Search</span>
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           13 Free Generative Engine Optimization (GEO) utilities to help your brand build topical authority and get cited by Gemini, ChatGPT, and Perplexity.
         </p>
+        
+        {/* Mobile RSS Button */}
+        <div className="md:hidden flex justify-center mt-4">
+          <RssButton />
+        </div>
       </header>
 
       {/* TOOLS GRID */}
@@ -68,8 +80,6 @@ export default function Home() {
             <h3 className="text-lg font-bold text-blue-800 group-hover:text-blue-600 mb-2">12. Freshness Scorer ➔</h3>
             <p className="text-sm text-gray-600">Calculate AI relevance decay over time.</p>
           </a>
-          
-          {/* THE 13TH TOOL (RED TINT) */}
           <a href="/tools/ai-traffic-risk-calculator" className="block p-6 bg-red-50 border rounded-xl shadow-sm hover:shadow-lg hover:border-red-400 transition-all group border-red-200">
             <h3 className="text-lg font-bold text-red-800 group-hover:text-red-600 mb-2">13. AI Traffic Risk Calc ➔</h3>
             <p className="text-sm text-gray-700">Calculate how many clicks you will lose to AI search.</p>
@@ -83,41 +93,17 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-gray-900">GEO Guides & Articles</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-          <a href="/blog/what-is-geo" className="block p-6 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition">
+          <a href="/blog/what-is-geo" className="block p-6 bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-md transition">
             <h3 className="text-md font-bold text-gray-900 mb-2">What is GEO? ➔</h3>
             <p className="text-sm text-gray-600">Our definitive guide to AI search.</p>
           </a>
-          <a href="/blog/json-ld-entity-seo" className="block p-6 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition">
+          <a href="/blog/json-ld-entity-seo" className="block p-6 bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-md transition">
             <h3 className="text-md font-bold text-gray-900 mb-2">JSON-LD & Entity SEO ➔</h3>
             <p className="text-sm text-gray-600">The language you need to speak.</p>
           </a>
-          <a href="/blog/zero-click-serp-survival" className="block p-6 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition">
+          <a href="/blog/zero-click-serp-survival" className="block p-6 bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-md transition">
             <h3 className="text-md font-bold text-gray-900 mb-2">Zero-Click SERP Survival ➔</h3>
             <p className="text-sm text-gray-600">Why tools are the new blogs.</p>
-          </a>
-          <a href="/blog/ai-search-gemini-2026" className="block p-6 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition">
-            <h3 className="text-md font-bold text-gray-900 mb-2">Google Gemini's Impact ➔</h3>
-            <p className="text-sm text-gray-600">How Gemini shifted the landscape.</p>
-          </a>
-          <a href="/blog/optimize-perplexity-ai" className="block p-6 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition">
-            <h3 className="text-md font-bold text-gray-900 mb-2">Optimizing for Perplexity ➔</h3>
-            <p className="text-sm text-gray-600">Mastering RAG.</p>
-          </a>
-          <a href="/blog/information-gain-generative-seo" className="block p-6 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition">
-            <h3 className="text-md font-bold text-gray-900 mb-2">Information Gain Metric ➔</h3>
-            <p className="text-sm text-gray-600">The metric that matters most.</p>
-          </a>
-          <a href="/blog/micro-saas-indie-hacking-ai" className="block p-6 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition">
-            <h3 className="text-md font-bold text-gray-900 mb-2">Micro-SaaS Indie Hacking ➔</h3>
-            <p className="text-sm text-gray-600">The most profitable solo path.</p>
-          </a>
-          <a href="/blog/biggest-geo-mistakes" className="block p-6 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition">
-            <h3 className="text-md font-bold text-gray-900 mb-2">Top 5 GEO Mistakes ➔</h3>
-            <p className="text-sm text-gray-600">Common developer pitfalls.</p>
-          </a>
-          <a href="/blog/ai-search-ranking-factors" className="block p-6 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition">
-            <h3 className="text-md font-bold text-gray-900 mb-2">AI Ranking Factors ➔</h3>
-            <p className="text-sm text-gray-600">Measurable signals for success.</p>
           </a>
         </div>
       </section>
