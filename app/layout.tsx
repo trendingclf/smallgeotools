@@ -19,7 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-gray-50 min-h-screen font-sans text-gray-900 selection:bg-blue-200">
+      {/* Added flex and flex-col to keep the footer pinned to the bottom */}
+      <body className="bg-gray-50 min-h-screen font-sans text-gray-900 selection:bg-blue-200 flex flex-col">
         
         {/* GLOBAL NAVIGATION BAR */}
         <nav className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
@@ -51,9 +52,22 @@ export default function RootLayout({
           </div>
         </nav>
 
-        <main>
+        {/* MAIN CONTENT (flex-grow ensures this pushes the footer down) */}
+        <main className="flex-grow">
           {children}
         </main>
+
+        {/* GLOBAL FOOTER */}
+        <footer className="bg-white border-t border-gray-200 py-8 mt-auto">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="text-sm text-gray-500 font-medium">
+              &copy; {new Date().getFullYear()} SmallGEOTools. All rights reserved.
+            </div>
+            <div className="text-sm font-bold text-gray-900 tracking-wide uppercase">
+              Built for the <span className="text-blue-600">Post-Web</span>
+            </div>
+          </div>
+        </footer>
 
       </body>
     </html>
