@@ -3,16 +3,50 @@ import Link from "next/link";
 // ADD YOUR ACTUAL ARTICLES HERE
 const articles = [
   {
-    title: "How to Build Topical Authority in 2026",
-    excerpt: "Learn how AI models group entities to determine your brand's authority.",
-    slug: "/blog/topical-authority-2026",
+    title: "What is GEO?",
+    excerpt: "Our definitive guide to Generative Engine Optimization.",
+    slug: "/blog/what-is-geo",
   },
   {
-    title: "The Death of Traditional Keywords",
-    excerpt: "Why semantic relevance has officially replaced keyword density.",
-    slug: "/blog/death-of-keywords",
+    title: "JSON-LD & Entity SEO",
+    excerpt: "The structured data language you need to speak for AI crawlers.",
+    slug: "/blog/json-ld-entity-seo",
   },
-  // Add more articles as you write them...
+  {
+    title: "Zero-Click SERP Survival",
+    excerpt: "Why interactive tools are the new blogs in the AI search era.",
+    slug: "/blog/zero-click-serp-survival",
+  },
+  {
+    title: "AI Search Ranking Factors",
+    excerpt: "The core metrics that drive visibility in LLM outputs.",
+    slug: "/blog/ai-search-ranking-factors",
+  },
+  {
+    title: "Information Gain in Generative SEO",
+    excerpt: "Why providing unique data is your strongest SEO moat.",
+    slug: "/blog/information-gain-generative-seo",
+  },
+  {
+    title: "How to Optimize for Perplexity AI",
+    excerpt: "Getting your brand cited in the world's fastest-growing answer engine.",
+    slug: "/blog/optimize-perplexity-ai",
+  },
+  {
+    title: "AI Search & Gemini in 2026",
+    excerpt: "How Google's generative models are reshaping search query intent.",
+    slug: "/blog/ai-search-gemini-2026",
+  },
+  {
+    title: "The Biggest GEO Mistakes",
+    excerpt: "Common pitfalls developers make when optimizing for generative engines.",
+    slug: "/blog/biggest-geo-mistakes",
+  },
+  {
+    title: "Micro SaaS & Indie Hacking AI",
+    excerpt: "Building profitable, lightweight utilities in the AI landscape.",
+    slug: "/blog/micro-saas-indie-hacking-ai",
+  }
 ];
 
 export default function Home() {
