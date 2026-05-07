@@ -1,27 +1,32 @@
-import RssButton from "../components/RssButton";
+import Link from "next/link";
+
+// ADD YOUR ACTUAL ARTICLES HERE
+const articles = [
+  {
+    title: "How to Build Topical Authority in 2026",
+    excerpt: "Learn how AI models group entities to determine your brand's authority.",
+    slug: "/blog/topical-authority-2026",
+  },
+  {
+    title: "The Death of Traditional Keywords",
+    excerpt: "Why semantic relevance has officially replaced keyword density.",
+    slug: "/blog/death-of-keywords",
+  },
+  // Add more articles as you write them...
+];
 
 export default function Home() {
   return (
     <div className="space-y-12 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       
       {/* HERO SECTION */}
-      <header className="text-center space-y-6 mb-20 mt-10 relative">
-        {/* Top Right Mini-Nav / Status */}
-        <div className="absolute top-0 right-0 hidden md:block">
-           <RssButton />
-        </div>
-
+      <header className="text-center space-y-6 mb-20 mt-6">
         <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 tracking-tight">
           Dominate <span className="text-blue-600">AI Search</span>
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           13 Free Generative Engine Optimization (GEO) utilities to help your brand build topical authority and get cited by Gemini, ChatGPT, and Perplexity.
         </p>
-        
-        {/* Mobile RSS Button */}
-        <div className="md:hidden flex justify-center mt-4">
-          <RssButton />
-        </div>
       </header>
 
       {/* TOOLS GRID */}
@@ -87,25 +92,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* BLOG GRID */}
-      <section id="blog" className="scroll-mt-24">
+      {/* DYNAMIC BLOG GRID */}
+      <section id="blog" className="scroll-mt-24 mb-20">
         <div className="flex items-center justify-between border-b border-gray-200 pb-4 mb-8">
           <h2 className="text-3xl font-bold text-gray-900">GEO Guides & Articles</h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          <a href="/blog/what-is-geo" className="block p-6 bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-md transition">
-            <h3 className="text-md font-bold text-gray-900 mb-2">What is GEO? ➔</h3>
-            <p className="text-sm text-gray-600">Our definitive guide to AI search.</p>
-          </a>
-          <a href="/blog/json-ld-entity-seo" className="block p-6 bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-md transition">
-            <h3 className="text-md font-bold text-gray-900 mb-2">JSON-LD & Entity SEO ➔</h3>
-            <p className="text-sm text-gray-600">The language you need to speak.</p>
-          </a>
-          <a href="/blog/zero-click-serp-survival" className="block p-6 bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-md transition">
-            <h3 className="text-md font-bold text-gray-900 mb-2">Zero-Click SERP Survival ➔</h3>
-            <p className="text-sm text-gray-600">Why tools are the new blogs.</p>
-          </a>
-        </div>
+        
+        {articles.length > 0 ? (
+          <div className="grid md:grid-cols-3 gap-6">
+            {articles.map((article, index) => (
+              <Link href={article.slug} key={index} className="block p-6 bg-white border border-gray-200 rounded-xl hover:border-blue-300 hover:shadow-md transition group">
+                <h3 className="text-md font-bold text-gray-900 group-hover:text-blue-600 mb-2">{article.title} ➔</h3>
+                <p className="text-sm text-gray-600">{article.excerpt}</p>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-10 bg-gray-100 rounded-xl border border-dashed border-gray-300">
+            <p className="text-gray-500">No articles published yet. Check back soon!</p>
+          </div>
+        )}
       </section>
 
     </div>
