@@ -8,7 +8,7 @@ export default function Home() {
           Dominate <span className="text-blue-600">AI Search</span>
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-          12 Free Generative Engine Optimization (GEO) utilities to help your brand build topical authority and get cited by Gemini, ChatGPT, and Perplexity.
+          13 Free Generative Engine Optimization (GEO) utilities to help your brand build topical authority and get cited by Gemini, ChatGPT, and Perplexity.
         </p>
       </header>
 
@@ -16,7 +16,7 @@ export default function Home() {
       <section id="tools" className="scroll-mt-24">
         <div className="flex items-center justify-between border-b border-gray-200 pb-4 mb-8">
           <h2 className="text-3xl font-bold text-gray-900">The GEO Toolkit</h2>
-          <span className="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">12 Free Tools</span>
+          <span className="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">13 Free Tools</span>
         </div>
         
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6 mb-16">
@@ -56,8 +56,6 @@ export default function Home() {
             <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 mb-2">9. Semantic Keywords ➔</h3>
             <p className="text-sm text-gray-500">Generate LSI entities for content depth.</p>
           </a>
-          
-          {/* THE 3 NEW TOOLS */}
           <a href="/tools/sitemap-prompt" className="block p-6 bg-blue-50 border rounded-xl shadow-sm hover:shadow-lg hover:border-blue-400 transition-all group border-blue-200">
             <h3 className="text-lg font-bold text-blue-800 group-hover:text-blue-600 mb-2">10. Sitemap Prompt ➔</h3>
             <p className="text-sm text-gray-600">Convert your sitemap to an LLM audit prompt.</p>
@@ -70,6 +68,12 @@ export default function Home() {
             <h3 className="text-lg font-bold text-blue-800 group-hover:text-blue-600 mb-2">12. Freshness Scorer ➔</h3>
             <p className="text-sm text-gray-600">Calculate AI relevance decay over time.</p>
           </a>
+          
+          {/* THE 13TH TOOL (RED TINT) */}
+          <a href="/tools/ai-traffic-risk-calculator" className="block p-6 bg-red-50 border rounded-xl shadow-sm hover:shadow-lg hover:border-red-400 transition-all group border-red-200">
+            <h3 className="text-lg font-bold text-red-800 group-hover:text-red-600 mb-2">13. AI Traffic Risk Calc ➔</h3>
+            <p className="text-sm text-gray-700">Calculate how many clicks you will lose to AI search.</p>
+          </a>
         </div>
       </section>
 
@@ -79,7 +83,6 @@ export default function Home() {
           <h2 className="text-3xl font-bold text-gray-900">GEO Guides & Articles</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
-          {/* Keeping your existing 9 blog cards exactly as they were */}
           <a href="/blog/what-is-geo" className="block p-6 bg-gray-50 border border-gray-200 rounded-xl hover:bg-gray-100 transition">
             <h3 className="text-md font-bold text-gray-900 mb-2">What is GEO? ➔</h3>
             <p className="text-sm text-gray-600">Our definitive guide to AI search.</p>
